@@ -1,0 +1,116 @@
+.header{
+  width: 100%;
+  height: 100vh;
+  background: url(../image/header-backround.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 10px;
+}
+.header__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.header__top {
+  padding: 30px 0;
+  position: relative;
+  transition: all .3s;
+  z-index: 3;
+  animation: header---top 2s ease-in-out;
+}
+.header__top-container {
+  @extend %container;
+}
+.header__top-inner {
+  @extend %flex---default;
+}
+.header__top-list {
+  @extend %flex---item;
+}
+.header__top-item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.header__top-link {
+  color: $item---color;
+  position: relative;
+  transition: all .3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 110%; left: 0;
+    width: 100%; height: 2px;
+    transition: transform .3s;
+    transform: scaleX(0); transform-origin: right;
+    background: $global---color;
+  }
+  &:hover {
+    color: $global---color;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+.header__top-kwork {
+  color: $item---color;
+  font-size: 1.2em;
+  transition: all .3s;
+  &:hover {
+    color: $global---color;
+  }
+}
+.header__body {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.header__body-container {
+  @extend %container;
+}
+.header__body-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header__body-content {
+  text-align: center;
+  animation: header---title 4s ease-in-out;
+  margin-bottom: 100px;
+}
+.header__body-subtitle {
+  font-size: 1.5em;
+  color: $item---color;
+}
+.header__body-title {
+  font-size: clamp(2em, 7vw, 6em);
+  text-transform: uppercase;
+  color: $item---color;
+  font-weight: 700;
+  margin: 30px 0 40px;
+}
+.header__body-button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  font-size: 1.3em;
+  border-radius: $one---radius;
+  border: 2px solid $item---color;
+  color: $item---color;
+  text-transform: uppercase;
+  max-width: 250.52px;
+  transition: all .3s;
+  font-weight: 600;
+  &:hover {
+    border: 2px solid $global---color;
+    background: $global---color;
+    color: #000;
+  }
+}

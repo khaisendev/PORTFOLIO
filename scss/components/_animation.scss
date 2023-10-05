@@ -1,0 +1,9 @@
+@keyframes header---top {
+  from {transform: translateY(-100px);}
+  to {transform: translateY(0);}
+}
+
+@keyframes header---title {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
