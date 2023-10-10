@@ -7,6 +7,8 @@
 /// CONNECTING LAYOUT
 @import 'layout/header';
 @import 'layout/about';
+@import 'layout/skill';
+@import 'layout/services';
 @import 'layout/footer';
 
 /// CONNECTING COMPONENTS 
@@ -17,18 +19,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Unbounded', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
 
 html,body {
   scroll-behavior: smooth;
-  font-size: 15px;
 }
 body {
   background: $body---backround;
+  font-size: 15px;
 }
 .wrapper {
   position: relative;
@@ -37,3 +40,9 @@ body {
   width: 100%;
 }
 
+
+.main__section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}

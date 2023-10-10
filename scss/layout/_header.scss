@@ -1,32 +1,69 @@
 .header{
   width: 100%;
-  height: 100vh;
-  background: url(../image/header-backround.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
   padding-bottom: 10px;
 }
-.header__overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0; right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-}
 .header__top {
-  padding: 30px 0;
   position: relative;
   transition: all .3s;
   z-index: 3;
   animation: header---top 2s ease-in-out;
+  height: 60px;
 }
+.header__top-menu {
+  border-bottom: 2px solid $global---color;
+  padding: 20px 0;
+  width: 100%;
+  position: fixed;
+  top: -60px; right: 0;
+  background-color: transparent;
+  transition: .3s ease;
+}
+#navbar.scrolled {
+  background-color: $global---color;
+}
+#navbar.scrolled #logo {
+  filter: invert(1); 
+}
+#navbar.scrolled li a {
+  color: $item---color;
+  transition: all .3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 110%; left: 0;
+    width: 100%; height: 1.5px;
+    transition: transform .3s;
+    transform: scaleX(0); transform-origin: right;
+    background: $item---color;
+  }
+  &:hover {
+    color: $item---color;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+#navbar.menu {
+  top: 0;
+  transition: all .3s
+}
+
 .header__top-container {
   @extend %container;
 }
 .header__top-inner {
   @extend %flex---default;
+}
+.header__top-logo {
+  color: $global---color;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.2em;
+  transition: all .3s;
+  font-weight: 700;
+  &:hover {
+    color: $global---color;
+  }
 }
 .header__top-list {
   @extend %flex---item;
@@ -38,14 +75,15 @@
   }
 }
 .header__top-link {
-  color: $item---color;
+  color: $global---color;
+  font-weight: 600;
   position: relative;
   transition: all .3s;
   &::after {
     content: '';
     position: absolute;
     top: 110%; left: 0;
-    width: 100%; height: 2px;
+    width: 100%; height: 1.5px;
     transition: transform .3s;
     transform: scaleX(0); transform-origin: right;
     background: $global---color;
@@ -60,57 +98,95 @@
 }
 .header__top-kwork {
   color: $item---color;
-  font-size: 1.2em;
+  background: $global---color;
+  border-radius: $one---radius;
+  border: 2px solid $global---color;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  font-weight: 500;
   transition: all .3s;
   &:hover {
     color: $global---color;
+    background: transparent;
   }
 }
 .header__body {
   height: 100%;
+  padding: 50px 0;
+  animation: header---body 2s ease-in-out;
+}
+.header__body-inner {
   position: relative;
-  z-index: 1;
 }
 .header__body-container {
   @extend %container;
 }
-.header__body-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.header__body-main {}
+.header__body-title {
+  @extend %title;
+  font-size: clamp(2.2em, 6vw, 7em);
+  margin: 10px 0 40px;
+  line-height: 1.2;
+}
+.header__body-info {
+  @extend %flex---default;
 }
 .header__body-content {
-  text-align: center;
-  animation: header---title 4s ease-in-out;
-  margin-bottom: 100px;
+  margin-right: 10px;
 }
 .header__body-subtitle {
-  font-size: 1.5em;
-  color: $item---color;
-}
-.header__body-title {
-  font-size: clamp(2em, 7vw, 6em);
   text-transform: uppercase;
-  color: $item---color;
-  font-weight: 700;
-  margin: 30px 0 40px;
+  letter-spacing: 2px;
+  color: $global---color;
+  line-height: 1.3;
+  max-width: 750px;
+  font-weight: 800;
+  font-size: 3em;
+}
+.header__body-description {
+  color: $description---color;
+  font-size: 1.3em;
+  margin: 20px 0 40px;
+  line-height: 1.2;
+  max-width: 550px;
+}
+.header__body-btn {
+  display: flex;
+  text-transform: uppercase;
 }
 .header__body-button {
-  display: block;
-  margin: 0 auto;
-  padding: 15px 30px;
-  font-size: 1.3em;
+  border: 2px solid $global---color;
   border-radius: $one---radius;
-  border: 2px solid $item---color;
+  background: $global---color;
   color: $item---color;
-  text-transform: uppercase;
-  max-width: 250.52px;
   transition: all .3s;
+  padding: 15px 30px;
+  margin-right: 20px;
+  font-size: 1.4em;
   font-weight: 600;
   &:hover {
-    border: 2px solid $global---color;
+    background: transparent;
+    color: $global---color;
+  }
+}
+.header__body-kwork {
+  border: 2px solid $global---color;
+  border-radius: $one---radius;
+  transition: all .3s;
+  padding: 15px 30px;
+  font-size: 1.4em;
+  font-weight: 600;
+  &:hover {
     background: $global---color;
-    color: #000;
+    color: $item---color;
+  }
+}
+.header__body-image {
+  max-width: 550px;
+  filter: grayscale(100%);
+  border-radius: 20px;
+  transition: all .3s;
+  &:hover {
+    filter: grayscale(0%);
   }
 }

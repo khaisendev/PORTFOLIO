@@ -4,42 +4,218 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Khaisen | Веб-разработчик</title>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="header__overlay"></div>
       <div class="header__top">
-        <div class="header__top-container">
-          <div class="header__top-inner">
-            <a class="header__top-kwork" href="https://kwork.ru/user/khaisen" target="_blank">My Kwork</a>
-            <nav class="header__top-nav">
-              <ul class="header__top-list">
-                <li class="header__top-item"> <a class="header__top-link" href="#">Обо мне</a> </li>
-                <li class="header__top-item"> <a class="header__top-link" href="#">Услуги</a> </li>
-                <li class="header__top-item"> <a class="header__top-link" href="#">Портфолио</a> </li>
-                <li class="header__top-item"> <a class="header__top-link" href="#">Отзывы</a> </li>
-                <li class="header__top-item"> <a class="header__top-link" href="#">Контакты</a> </li>
-              </ul>
-            </nav>
+        <div class="header__top-menu" id="navbar">
+          <div class="header__top-container">
+            <div class="header__top-inner">
+              <a class="header__top-logo" href="https://kwork.ru/user/khaisen" id="logo" target="_blank">KHAISENDEV</a>
+              <nav class="header__top-nav">
+                <ul class="header__top-list">
+                  <li class="header__top-item"> <a class="header__top-link" href="#about">Обо мне</a> </li>
+                  <li class="header__top-item"> <a class="header__top-link" href="#skill">Скилл</a> </li>
+                  <li class="header__top-item"> <a class="header__top-link" href="#services">Услуги</a> </li>
+                  <li class="header__top-item"> <a class="header__top-link" href="#">Портфолио</a> </li>
+                  <li class="header__top-item"> <a class="header__top-link" href="#">Контакты</a> </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
       <div class="header__body">
-        <div class="header__body-container">
-          <div class="header__body-inner">
-            <div class="header__body-content">
-              <h2 class="header__body-subtitle">WEB - DEVELOPER</h2>
-              <h1 class="header__body-title">Создаю сайты которые работаю на вас</h1>
-              <a class="header__body-button" href="#">Написать мне</a>
+        <div class="header__body-inner">
+          <div class="header__body-container">
+            <div class="header__body-main">
+               <h1 class="header__body-title">ВЕБ - РАЗРАБОТКА</h1>
+               <div class="header__body-info">
+                 <div class="header__body-content">
+                   <h2 class="header__body-subtitle">Создаю сайты работающие на вас</h2>
+                   <p class="header__body-description">Моя главная цель - обеспечить комфортное существование, вашего бизнеса в просторах интренета.</p>
+                   <div class="header__body-btn">
+                     <a class="header__body-button" href="#">Написать мне </a>
+                     <a class="header__body-kwork" href="https://kwork.ru/user/khaisen" target="_blank">My kwork</a>
+                   </div>
+                 </div>
+                  <img class="header__body-image" src="image/wolter-header.jpg" alt="Фотка уолтера уайта арт">
+               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="sasha__top-05"></div>
+    <main>
+      <section class="about main__section" id="about">
+        <div class="about__info">
+          <div class="about__info-container">
+            <div class="about__info-inner">
+              <div class="about__info-image">
+                <img src="image/wolter-about.jpg" alt="Арт Уолтера Уайта">
+              </div>
+              <div class="about__info-content">
+                <h2 class="about__info-title">About</h2>
+                <ul class="about__info-list">
+                  <li class="about__info-item">
+                    <span>Обо мне</span>
+                    <p class="about__info-description">Занимаю разработкой уже более года, выбор информационного направления был аргументирован первоначальной «любовью» к программному коду и глубокой интеграцией всех сфер современной жизни.</p>
+                  </li>
+                  <li class="about__info-item">
+                    <span>Сильные рабочие качества</span>
+                    <ol class="about__info-quality">
+                      <li>Трудолюбие</li>
+                      <li>Погружние в работу</li>
+                      <li>Любовь к мелочам</li>
+                      <li>Нацеленность на результат</li>
+                    </ol>
+                  </li>
+                  <li class="about__info-item">
+                    <span>Цель</span>
+                    <p class="about__info-description">Стать высококачественным специалистом, в сфере веб-разработки</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skill main__section" id="skill">
+        <div class="skill__info">
+          <div class="skill__info-container">
+            <div class="skill__info-inner">
+              <div class="skill__info-content">
+                <h2 class="skill__info-title">My skill</h2>
+                <div class="skill__info-progressbar"> 
+                  <ul class="skill__info-list">
+                    <li class="skill__info-progress">
+                      <div class="rating-title">HTML</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="90"></div>
+                      </div>
+                    </li>
+                    <li class="skill__info-progress">
+                      <div class="rating-title">CSS</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="80"></div>
+                      </div>
+                    </li>
+                    <li class="skill__info-progress">
+                      <div class="rating-title">SCSS</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="70"></div>
+                      </div>
+                    </li>
+                    <li class="skill__info-progress">
+                      <div class="rating-title">Javascript</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="50"></div>
+                      </div>
+                    </li>
+                    <li class="skill__info-progress">
+                      <div class="rating-title">Wordpress</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="75"></div>
+                      </div>
+                    </li>
+                    <li class="skill__info-progress">
+                      <div class="rating-title">Figma</div>
+                      <div class="rating-item">
+                        <div class="rating-item_progress" data-progress="70"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skill__info-image">
+                <img src="image/wolter-skill.jpg" alt="Арт Уолтера Уайта">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services main__section" id="services">
+        <div class="services__info">
+          <div class="services__info-container">
+            <div class="services__info-inner">
+              <div class="services__info-image">
+                <img src="image/wolter-services.jpg" alt="Арт Уолтера Уйата">
+              </div>
+              <div class="services__info-content">
+                <h2 class="services__info-title">SERVISEC</h2>
+                <ul class="services__info-list">
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm8.647,7H17.426a19.676,19.676,0,0,0-2.821-4.644A10.031,10.031,0,0,1,20.647,7ZM16.5,12a10.211,10.211,0,0,1-.476,3H7.976A10.211,10.211,0,0,1,7.5,12a10.211,10.211,0,0,1,.476-3h8.048A10.211,10.211,0,0,1,16.5,12ZM8.778,17h6.444A19.614,19.614,0,0,1,12,21.588,19.57,19.57,0,0,1,8.778,17Zm0-10A19.614,19.614,0,0,1,12,2.412,19.57,19.57,0,0,1,15.222,7ZM9.4,2.356A19.676,19.676,0,0,0,6.574,7H3.353A10.031,10.031,0,0,1,9.4,2.356ZM2.461,9H5.9a12.016,12.016,0,0,0-.4,3,12.016,12.016,0,0,0,.4,3H2.461a9.992,9.992,0,0,1,0-6Zm.892,8H6.574A19.676,19.676,0,0,0,9.4,21.644,10.031,10.031,0,0,1,3.353,17Zm11.252,4.644A19.676,19.676,0,0,0,17.426,17h3.221A10.031,10.031,0,0,1,14.605,21.644ZM21.539,15H18.1a12.016,12.016,0,0,0,.4-3,12.016,12.016,0,0,0-.4-3h3.437a9.992,9.992,0,0,1,0,6Z"/>
+                      </svg>
+                      <h3>Сайт с нуля</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M18.656.93,6.464,13.122A4.966,4.966,0,0,0,5,16.657V18a1,1,0,0,0,1,1H7.343a4.966,4.966,0,0,0,3.535-1.464L23.07,5.344a3.125,3.125,0,0,0,0-4.414A3.194,3.194,0,0,0,18.656.93Zm3,3L9.464,16.122A3.02,3.02,0,0,1,7.343,17H7v-.343a3.02,3.02,0,0,1,.878-2.121L20.07,2.344a1.148,1.148,0,0,1,1.586,0A1.123,1.123,0,0,1,21.656,3.93Z"/>
+                        <path d="M23,8.979a1,1,0,0,0-1,1V15H18a3,3,0,0,0-3,3v4H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2h9.042a1,1,0,0,0,0-2H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H16.343a4.968,4.968,0,0,0,3.536-1.464l2.656-2.658A4.968,4.968,0,0,0,24,16.343V9.979A1,1,0,0,0,23,8.979ZM18.465,21.122a2.975,2.975,0,0,1-1.465.8V18a1,1,0,0,1,1-1h3.925a3.016,3.016,0,0,1-.8,1.464Z"/>
+                      </svg>
+                      <h3>Верстка сайта</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z"/>
+                        <circle cx="7" cy="22" r="2"/>
+                        <circle cx="17" cy="22" r="2"/>
+                      </svg>
+                      <h3>Интернет магазин</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg width="40px" height="40px" viewBox="0 0 24 24" fill="">
+                        <path d="M15.6316 7.63137C15.2356 7.23535 15.0376 7.03735 14.9634 6.80902C14.8981 6.60817 14.8981 6.39183 14.9634 6.19098C15.0376 5.96265 15.2356 5.76465 15.6316 5.36863L18.47 2.53026C17.7168 2.18962 16.8806 2 16.0002 2C12.6865 2 10.0002 4.68629 10.0002 8C10.0002 8.49104 10.0592 8.9683 10.1705 9.42509C10.2896 9.91424 10.3492 10.1588 10.3387 10.3133C10.3276 10.4751 10.3035 10.5612 10.2289 10.7051C10.1576 10.8426 10.0211 10.9791 9.74804 11.2522L3.50023 17.5C2.6718 18.3284 2.6718 19.6716 3.50023 20.5C4.32865 21.3284 5.6718 21.3284 6.50023 20.5L12.748 14.2522C13.0211 13.9791 13.1576 13.8426 13.2951 13.7714C13.4391 13.6968 13.5251 13.6727 13.6869 13.6616C13.8414 13.651 14.086 13.7106 14.5751 13.8297C15.0319 13.941 15.5092 14 16.0002 14C19.3139 14 22.0002 11.3137 22.0002 8C22.0002 7.11959 21.8106 6.28347 21.47 5.53026L18.6316 8.36863C18.2356 8.76465 18.0376 8.96265 17.8092 9.03684C17.6084 9.1021 17.3921 9.1021 17.1912 9.03684C16.9629 8.96265 16.7649 8.76465 16.3689 8.36863L15.6316 7.63137Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <h3>Дороботка сайта</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/>
+                        <path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/>
+                        </svg>                      
+                      <h3>Ускорение сайта</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm.5,20.975V19.69A4.19,4.19,0,0,0,8.31,15.5H8.3a3.143,3.143,0,0,1-2.223-.921L3.024,11.524A8.985,8.985,0,0,1,17.016,4.532a1.548,1.548,0,0,1-.913.3H14.669A1.555,1.555,0,0,0,13.114,6.39V7.432a1.555,1.555,0,0,1-1.555,1.555h0A1.555,1.555,0,0,0,10,10.542v1.042a1.555,1.555,0,0,0,1.555,1.555h4.156a1.555,1.555,0,0,1,1.555,1.555v1.52a1.555,1.555,0,0,0,.456,1.1l.833.833A8.964,8.964,0,0,1,12.5,20.975Z"/>
+                      </svg>
+                      <h3>Подключение домена</h3>
+                    </a>
+                  </li>
+                  <li class="servisec__info-item">
+                    <a class="servisec__info-link" href="#">
+                      <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path d="M19,0H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,19,0ZM5,2H19a3,3,0,0,1,3,3V19a2.951,2.951,0,0,1-.3,1.285l-9.163-9.163a5,5,0,0,0-7.072,0L2,14.586V5A3,3,0,0,1,5,2ZM5,22a3,3,0,0,1-3-3V17.414l4.878-4.878a3,3,0,0,1,4.244,0L20.285,21.7A2.951,2.951,0,0,1,19,22Z"/>
+                        <path d="M16,10.5A3.5,3.5,0,1,0,12.5,7,3.5,3.5,0,0,0,16,10.5Zm0-5A1.5,1.5,0,1,1,14.5,7,1.5,1.5,0,0,1,16,5.5Z"/>
+                      </svg>
+                      <h3>Оптимизация изображений</h3>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
